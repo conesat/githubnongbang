@@ -1,0 +1,36 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+
+    android:layout_height="match_parent"
+    android:orientation="horizontal">
+
+    <org.opencv.android.JavaCameraView
+        android:id="@+id/image_manipulations_activity_surface_view"
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent" />
+
+    <LinearLayout
+        android:layout_width="60dp"
+        android:background="#75050505"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/scan_outline"
+            android:layout_marginTop="30dp"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:src="@drawable/scaleaf" />
+
+        <TextView
+            android:gravity="center"
+            android:textColor="#808080"
+            android:textSize="12sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="轮廓线" />
+    </LinearLayout>
+
+</RelativeLayout>

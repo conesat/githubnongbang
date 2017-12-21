@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:background="#00efefef"
+    android:layout_height="200dp">
+
+    <RelativeLayout
+        android:paddingBottom="5dp"
+        android:background="#00111111"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:scaleType="centerCrop"
+            android:id="@+id/zyiv"
+            android:layout_width="match_parent"
+            android:layout_height="200dp" />
+
+        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:weightSum="1">
+
+
+            <TextView
+                android:id="@+id/zymingzi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/zymc"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="作物名称"
+                android:textColor="#ffffff"
+                android:textSize="30sp" />
+
+
+            <TextView
+                android:layout_marginTop="10dp"
+                android:id="@+id/zysay"
+                android:background="@drawable/zysay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#ffffff"
+                android:padding="10dp"
+                android:text="种植时留下的寄语" />
+        </LinearLayout>
+
+
+    </RelativeLayout>
+</LinearLayout>

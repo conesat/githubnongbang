@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="#22bd91"
+    android:gravity="center"
+    android:padding="3dp"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_marginRight="0dp"
+        android:layout_width="80dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:layout_height="50dp"
+        >
+        <ImageButton
+            android:id="@+id/zy_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/zya"
+            android:layout_weight="1"
+            android:scaleType="fitCenter"
+            android:background="#00111111"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="庄园"
+            android:textColor="#e4e4e4"
+            android:textSize="12sp"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_width="80dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:layout_height="50dp">
+        <ImageButton
+            android:id="@+id/zw_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/zw"
+            android:background="#00000000"
+            android:layout_weight="1"
+            android:scaleType="fitCenter"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="作物"
+            android:textColor="#e4e4e4"
+            android:textSize="12sp"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_marginLeft="0dp"
+        android:id="@+id/wd"
+        android:layout_width="80dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:layout_height="50dp">
+
+        <ImageButton
+            android:id="@+id/wd_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="#00111111"
+            android:scaleType="fitCenter"
+            android:src="@drawable/wd" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="我的"
+            android:textColor="#e4e4e4"
+            android:textSize="12sp"/>
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:background="#41d6ac"
+    android:layout_height="match_parent">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:background="#22bd91"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/tjback"
+                    android:layout_width="40dp"
+                    android:layout_height="match_parent"
+                    android:layout_margin="5dp"
+                    android:background="#00ffffff"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/ic_back"  />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/tjyclayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/tjiv"
+                    android:scaleType="fitCenter"
+                    android:layout_width="match_parent"
+                    android:layout_height="500dp" />
+
+                <TextView
+                    android:layout_margin="5dp"
+                    android:textSize="20sp"
+                    android:id="@+id/tjyy"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="营养状态" />
+
+                <TextView
+                    android:layout_margin="5dp"
+                    android:textSize="20sp"
+                    android:id="@+id/tjch"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="虫害状态" />
+
+            </LinearLayout>
+
+            <Button
+                android:background="@drawable/greenbutton200"
+                android:textColor="#ffffff"
+                android:layout_margin="20dp"
+                android:id="@+id/tjpaizaho"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="拍照" />
+            <Button
+                android:background="@drawable/greenbutton200"
+                android:textColor="#ffffff"
+                android:layout_margin="20dp"
+                android:id="@+id/tjxuantu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="选取图片" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

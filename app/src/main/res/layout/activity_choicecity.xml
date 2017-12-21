@@ -1,0 +1,51 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipToPadding="true"
+    android:background="#22bd91"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:background="#22bd91"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/choicecity_back"
+            android:layout_width="60dp"
+            android:layout_height="40dp"
+            android:padding="15dp"
+            android:background="#22bd91"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_back"/>
+
+        <TextView
+            android:id="@+id/choicecity_tv"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:textSize="18sp"
+            android:layout_marginRight="60dp"
+            android:layout_height="match_parent"
+            android:textColor="#ffffff"
+            android:text="中国" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:background="#ffffff"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <ListView
+            android:id="@+id/province_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#ffffff"
+            android:cacheColorHint="@android:color/transparent"
+            android:fadingEdge="none"></ListView>
+    </LinearLayout>
+
+</LinearLayout>

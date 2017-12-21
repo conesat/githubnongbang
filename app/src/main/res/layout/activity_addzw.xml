@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:background="#24bd92"
+    android:clipToPadding="true"
+    android:fitsSystemWindows="true"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:background="#ffffff"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:background="#22bd91"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:id="@+id/addback"
+                    android:layout_width="60dp"
+                    android:layout_height="40dp"
+                    android:background="#22bd91"
+                    android:padding="15dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/ic_back" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/add_iv"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:scaleType="centerCrop"/>
+
+                <TextView
+                    android:visibility="gone"
+                    android:id="@+id/add_huantu"
+                    android:background="#5a000000"
+                    android:textColor="#ffffff"
+                    android:gravity="center"
+                    android:textSize="20sp"
+                    android:padding="3dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:text="点击换图" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_margin="5dp"
+                android:padding="5dp"
+                android:background="@drawable/hui5"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="20sp"
+                    android:textColor="#24bd92"
+                    android:text="名称:" />
+
+                <EditText
+                    android:background="#00ffffff"
+                    android:id="@+id/addmingcheng"
+                    android:gravity="center"
+                    android:padding="0dp"
+                    android:textSize="16sp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:inputType="textPersonName"
+                    android:hint="请输入植物的名称" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_margin="5dp"
+                android:padding="5dp"
+                android:background="@drawable/hui5"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="20sp"
+                    android:textColor="#24bd92"
+                    android:text="寄语:" />
+
+                <EditText
+                    android:background="#00ffffff"
+                    android:id="@+id/addsay"
+                    android:gravity="center"
+                    android:padding="0dp"
+                    android:textSize="16sp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:inputType="textPersonName"
+                    android:hint="输入你想说的" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_margin="5dp"
+                android:padding="5dp"
+                android:background="@drawable/hui5"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="20sp"
+                    android:textColor="#24bd92"
+                    android:text="日期:" />
+
+                <TextView
+                    android:background="#00ffffff"
+                    android:id="@+id/addriqi"
+                    android:gravity="center"
+                    android:padding="0dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:inputType="textPersonName"
+                    android:hint="点击选择日期" />
+            </LinearLayout>
+
+            <Button
+                android:layout_margin="20dp"
+                android:id="@+id/addtianjia"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/greenbutton200"
+                android:textColor="#ffffff"
+                android:text="确认添加" />
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

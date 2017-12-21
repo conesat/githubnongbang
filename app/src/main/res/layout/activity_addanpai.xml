@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#22bd91"
+    android:fitsSystemWindows="true"
+    android:clipToPadding="true"
+    android:orientation="vertical"
+    tools:context="nongbang.hg.nongbang.AddAnPaiActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+
+        <LinearLayout
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/add_back"
+                android:layout_width="40dp"
+                android:layout_height="match_parent"
+                android:layout_margin="5dp"
+                android:background="#00ffffff"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_back" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:gravity="right"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/add_finish"
+                android:layout_width="60dp"
+                android:layout_height="40dp"
+                android:layout_gravity="right"
+
+                android:background="#22bd91"
+                android:padding="20dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/choice" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#e9e9e9"
+        android:orientation="vertical">
+
+        <EditText
+            android:enabled="false"
+            android:layout_marginTop="5dp"
+            android:id="@+id/addap_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:autoLink="all"
+            android:background="#ffffff"
+            android:hint="请选择下面内容"
+            android:inputType="textPersonName"
+            android:padding="10dp"
+            android:textSize="16dp" />
+
+        <LinearLayout
+            android:layout_marginTop="1dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <CheckBox
+                android:id="@+id/addap_watering"
+                android:textColor="#068b7d"
+                android:background="#ffffff"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="浇水" />
+
+            <CheckBox
+                android:id="@+id/addap_sunshine"
+                android:background="#ffffff"
+                android:textColor="#d6bb0c"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="晒阳光" />
+
+            <CheckBox
+                android:id="@+id/addap_moving"
+                android:background="#ffffff"
+                android:textColor="#0cd619"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="搬移" />
+            <CheckBox
+                android:id="@+id/addap_trim"
+                android:background="#ffffff"
+                android:textColor="#d60cc5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="修剪" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginTop="1dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <CheckBox
+                android:id="@+id/addap_fertilizer"
+                android:background="#ffffff"
+                android:textColor="#d67b0c"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="施肥" />
+
+            <CheckBox
+                android:id="@+id/addap_weed"
+                android:background="#ffffff"
+                android:textColor="#d61d0c"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="除草" />
+
+            <CheckBox
+                android:id="@+id/addap_pyrethrum"
+                android:background="#ffffff"
+                android:textColor="#0f0cd6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="除虫" />
+
+
+            <CheckBox
+                android:id="@+id/addap_pollination"
+                android:background="#ffffff"
+                android:textColor="#b14f89"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="授粉" />
+        </LinearLayout>
+
+
+        <EditText
+            android:id="@+id/addap_describe"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="1dp"
+            android:layout_weight="1"
+            android:background="#ffffff"
+            android:gravity="left"
+            android:hint="安排描述"
+            android:inputType="textPersonName"
+            android:padding="10dp"
+            android:textSize="16dp" />
+        <Button
+            android:id="@+id/addap_riqi"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:layout_margin="10dp"
+            android:text="点击设置提醒日期"
+            android:background="@drawable/greenbutton200"
+            android:textColor="#ffffff"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+
+</LinearLayout>

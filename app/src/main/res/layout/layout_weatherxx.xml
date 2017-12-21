@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:id="@+id/weatherxx"
+    android:visibility="gone"
+    android:background="#58111111"
+    android:paddingLeft="10dp"
+    android:layout_marginLeft="15dp"
+    android:layout_marginRight="15dp"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        android:textColor="#ffffff"
+        android:textSize="20sp"
+        android:gravity="center"
+        android:layout_margin="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="今日实时概况" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/xx_1"
+            android:gravity="center"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textColor="#38ead8"
+            android:textSize="13sp"
+            android:padding="5dp"
+            android:text="气温" />
+
+        <TextView
+            android:gravity="center"
+            android:id="@+id/xx_2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textColor="#38ead8"
+            android:textSize="13sp"
+            android:padding="5dp"
+            android:text="风向" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:gravity="center"
+            android:id="@+id/xx_3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textColor="#38ead8"
+            android:textSize="13sp"
+            android:padding="5dp"
+            android:text="null" />
+
+        <TextView
+            android:gravity="center"
+            android:id="@+id/xx_4"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textColor="#38ead8"
+            android:textSize="13sp"
+            android:padding="5dp"
+            android:text="null" />
+    </LinearLayout>
+    <TextView
+
+        android:textColor="#ffffff"
+        android:textSize="20sp"
+        android:gravity="center"
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="未来两天天气" />
+    <LinearLayout
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:gravity="center"
+                android:id="@+id/xx_m1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+
+                android:textColor="#38ead8"
+                android:textSize="13sp"
+                android:padding="5dp"
+                android:text="null" />
+
+            <TextView
+                android:gravity="center"
+                android:id="@+id/xx_m2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textColor="#38ead8"
+                android:textSize="13sp"
+                android:padding="5dp"
+                android:text="null" />
+
+            <TextView
+                android:gravity="center"
+                android:id="@+id/xx_m3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textColor="#38ead8"
+                android:textSize="13sp"
+                android:padding="5dp"
+                android:text="null" />
+
+            <TextView
+                android:gravity="center"
+                android:id="@+id/xx_m4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textColor="#38ead8"
+                android:textSize="13sp"
+                android:padding="5dp"
+                android:text="null" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/xx_h1"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textColor="#38ead8"
+                android:textSize="13sp"
+                android:padding="5dp"
+                android:text="null" />
+
+            <TextView
+                android:id="@+id/xx_h2"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textColor="#38ead8"
+                android:textSize="13sp"
+                android:padding="5dp"
+                android:text="null" />
+
+            <TextView
+                android:id="@+id/xx_h3"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textColor="#38ead8"
+                android:textSize="13sp"
+                android:padding="5dp"
+                android:text="null" />
+
+            <TextView
+                android:id="@+id/xx_h4"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textColor="#38ead8"
+                android:textSize="13sp"
+                android:padding="5dp"
+                android:text="null" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>
