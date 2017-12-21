@@ -94,6 +94,9 @@ public class LoadingActivity extends AppCompatActivity {
                 startRequestPermission();
             }
         }else {
+            /*
+            新修改部分
+             */
             sp = getSharedPreferences("config", MODE_PRIVATE);
             String data = sp.getString("first", "");
             if (data.compareTo("") == 0) {
