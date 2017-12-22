@@ -35,6 +35,7 @@ import java.util.Map;
 
 import nongbang.hg.nongbang.MSQLite.ZWDBOpenHelper;
 import nongbang.hg.nongbang.MSQLite.ZwDb;
+import nongbang.hg.nongbang.MyAdapter.SquarelistAdapter;
 import nongbang.hg.nongbang.MyAdapter.ZwListAdapter;
 import nongbang.hg.nongbang.MyAdapter.ZyListAdapter;
 import nongbang.hg.nongbang.tools.Vibration;
@@ -67,10 +68,15 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private  List<Map<String,Object>> zyalllisttemp=new ArrayList<Map<String,Object>>();
     private  List<Map<String,Object>> zwalllist=new ArrayList<Map<String,Object>>();
     private  List<Map<String,Object>> zyalllist=new ArrayList<Map<String,Object>>();
+
+    private  List<Map<String,Object>> squarelist=new ArrayList<Map<String,Object>>();
+
     public int ZYtag=0,ZWTag=0;
     private ZwListAdapter zwadapter;
     private ZyListAdapter zyadapter;
-    public ListView zwlistView,zylistView;
+    private SquarelistAdapter squarelistAdapter;
+
+    public ListView zwlistView,zylistView,squarelistView;
     public View  tab00;
     public View  tab01;
     public View  tab02;
@@ -127,6 +133,15 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         LayoutInflater mlnflater=LayoutInflater.from(this);
 
         tab00=mlnflater.inflate(R.layout.layout_square,null);
+        squarelistView=(ListView)tab00.findViewById(R.id.square_listview);
+        for (int i=0;i<15;i++){
+            Map<String ,Object> map=new HashMap<String, Object>();
+            map.put("user","");
+            squarelist.add(map);
+        }
+        squarelistView.setOnScrollListener(this);
+        squarelistAdapter=new SquarelistAdapter(squarelist,this);
+        squarelistView.setAdapter(squarelistAdapter);
 
         tab01=mlnflater.inflate(R.layout.zy_layout,null);
 
