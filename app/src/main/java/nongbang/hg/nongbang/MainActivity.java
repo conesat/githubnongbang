@@ -47,7 +47,7 @@ import nongbang.hg.nongbang.view.ScanDialog;
 public class MainActivity extends AppCompatActivity implements View.OnClickListener,AbsListView.OnScrollListener{
 
     private ViewPager viewPager;
-
+    private ImageButton mSquareImg;
     private ImageButton mZyImg;
     private ImageButton mZwImg;
     private ImageButton mWdImg;
@@ -71,6 +71,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private ZwListAdapter zwadapter;
     private ZyListAdapter zyadapter;
     public ListView zwlistView,zylistView;
+    public View  tab00;
     public View  tab01;
     public View  tab02;
     public View  tab03;
@@ -103,14 +104,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     public void initView(){
         viewPager=(ViewPager)findViewById(R.id.VP);
+        mSquareImg=(ImageButton)findViewById(R.id.square_img);
         mZyImg=(ImageButton)findViewById(R.id.zy_img);
         mZwImg=(ImageButton)findViewById(R.id.zw_img);
         mWdImg=(ImageButton)findViewById(R.id.wd_img);
 
-
-        LayoutInflater mlnflater=LayoutInflater.from(this);
-        tab01=mlnflater.inflate(R.layout.zy_layout,null);
-        scanimg=(ImageView)tab01.findViewById(R.id.zy_scanning) ;
+        scanimg=(ImageView)findViewById(R.id.shibie) ;
         scanimg.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -124,6 +123,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
             }
         });
+
+        LayoutInflater mlnflater=LayoutInflater.from(this);
+
+        tab00=mlnflater.inflate(R.layout.layout_square,null);
+
+        tab01=mlnflater.inflate(R.layout.zy_layout,null);
+
         LinearLayout button=(LinearLayout)tab01.findViewById(R.id.zy_sousuo);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -238,6 +244,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         });
         //绑定我的界面组件并添加时间
 
+        mviews.add(tab00);
         mviews.add(tab01);
         mviews.add(tab02);
         mviews.add(tab03);
@@ -270,6 +277,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     public void initEvent(){
+        mSquareImg.setOnClickListener(this);
         mZyImg.setOnClickListener(this);
         mZwImg.setOnClickListener(this);
         mWdImg.setOnClickListener(this);
@@ -296,14 +304,17 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         Vibrator vibrator=(Vibrator) getSystemService(VIBRATOR_SERVICE);
         Vibration vibration=new Vibration(vibrator);
         switch (v.getId()){
-            case R.id.zy_img:
+            case R.id.square_img:
                 viewPager.setCurrentItem(0);
                 break;
-            case R.id.zw_img:
+            case R.id.zy_img:
                 viewPager.setCurrentItem(1);
                 break;
-            case R.id.wd_img:
+            case R.id.zw_img:
                 viewPager.setCurrentItem(2);
+                break;
+            case R.id.wd_img:
+                viewPager.setCurrentItem(3);
                 break;
 
             case R.id.wd_fangwen:
@@ -392,17 +403,21 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     重置底部tab
      */
     public void reSetImg(){
+        mSquareImg.setImageResource(R.drawable.square);
         mZwImg.setImageResource(R.drawable.zw);
         mZyImg.setImageResource(R.drawable.zy);
         mWdImg.setImageResource(R.drawable.wd);
         switch (viewPager.getCurrentItem()){
             case 0:
-                mZyImg.setImageResource(R.drawable.zya);
+                mSquareImg.setImageResource(R.drawable.squarea);
                 break;
             case 1:
-                mZwImg.setImageResource(R.drawable.zwa);
+                mZyImg.setImageResource(R.drawable.zya);
                 break;
             case 2:
+                mZwImg.setImageResource(R.drawable.zwa);
+                break;
+            case 3:
                 mWdImg.setImageResource(R.drawable.wda);
                 break;
         }

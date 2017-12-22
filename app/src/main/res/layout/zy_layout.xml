@@ -14,12 +14,12 @@
         android:layout_height="wrap_content">
 
         <LinearLayout
+            android:background="#22bd91"
             android:layout_width="match_parent"
-            android:layout_height="35dp"
-            android:background="#efefef"
+            android:layout_height="40dp"
             android:gravity="center"
             android:orientation="horizontal"
-            android:padding="3dp">
+            android:padding="5dp">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -40,7 +40,7 @@
                     android:gravity="center|right"
                     android:text="搜 索 作 物 "
                     android:textColor="#959595"
-                    android:textSize="18sp" />
+                    android:textSize="16sp" />
 
                 <ImageButton
                     android:layout_width="wrap_content"
@@ -52,21 +52,15 @@
                     android:src="@drawable/sousuo" />
             </LinearLayout>
 
-            <ImageView
-                android:layout_width="90dp"
-                android:layout_height="match_parent"
-                android:layout_marginRight="5dp"
-                android:layout_weight="1"
-                android:background="@drawable/bai5"
-                app:srcCompat="@drawable/scanning" />
         </LinearLayout>
 
         <LinearLayout
+
             android:layout_width="match_parent"
-            android:layout_height="35dp"
+            android:layout_height="40dp"
             android:gravity="center"
             android:orientation="horizontal"
-            android:padding="3dp">
+            android:padding="5dp">
 
             <LinearLayout
                 android:id="@+id/zy_sousuo"
@@ -87,7 +81,7 @@
                     android:gravity="center|right"
                     android:text="搜 索 作 物 "
                     android:textColor="#959595"
-                    android:textSize="18sp" />
+                    android:textSize="16sp" />
 
                 <ImageButton
                     android:visibility="invisible"
@@ -100,14 +94,6 @@
                     android:src="@drawable/sousuo" />
             </LinearLayout>
 
-            <ImageView
-                android:id="@+id/zy_scanning"
-                android:layout_width="90dp"
-                android:layout_height="match_parent"
-                android:layout_marginRight="5dp"
-                android:layout_weight="1"
-                android:background="@drawable/bai5"
-                app:srcCompat="@drawable/scanning" />
         </LinearLayout>
 
     </RelativeLayout>

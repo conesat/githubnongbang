@@ -7,8 +7,31 @@
     android:layout_height="wrap_content">
 
     <LinearLayout
-        android:layout_marginRight="0dp"
-        android:layout_width="80dp"
+        android:layout_width="0dp"
+        android:gravity="center"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:layout_height="50dp"
+        >
+        <ImageButton
+            android:id="@+id/square_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/squarea"
+            android:layout_weight="1"
+            android:scaleType="fitCenter"
+            android:background="#00111111"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="广场"
+            android:textColor="#e4e4e4"
+            android:textSize="12sp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_weight="1"
+        android:layout_width="0dp"
         android:gravity="center"
         android:orientation="vertical"
         android:layout_height="50dp"
@@ -17,7 +40,7 @@
             android:id="@+id/zy_img"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/zya"
+            android:src="@drawable/zy"
             android:layout_weight="1"
             android:scaleType="fitCenter"
             android:background="#00111111"/>
@@ -28,10 +51,33 @@
             android:textColor="#e4e4e4"
             android:textSize="12sp"/>
     </LinearLayout>
+
     <LinearLayout
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
-        android:layout_width="80dp"
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:layout_height="50dp"
+        >
+        <ImageButton
+            android:id="@+id/shibie"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/scanningbottom"
+            android:layout_weight="1"
+            android:scaleType="fitCenter"
+            android:background="#00ffffff"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="识别"
+            android:textStyle="bold"
+            android:textColor="#ffffff"
+            android:textSize="12sp"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_weight="1"
+        android:layout_width="0dp"
         android:gravity="center"
         android:orientation="vertical"
         android:layout_height="50dp">
@@ -51,9 +97,9 @@
             android:textSize="12sp"/>
     </LinearLayout>
     <LinearLayout
-        android:layout_marginLeft="0dp"
+        android:layout_weight="1"
         android:id="@+id/wd"
-        android:layout_width="80dp"
+        android:layout_width="0dp"
         android:gravity="center"
         android:orientation="vertical"
         android:layout_height="50dp">

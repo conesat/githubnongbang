@@ -16,13 +16,14 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="40dp"
+                android:gravity="center"
                 android:background="#24bd92"
                 android:orientation="horizontal">
 
                 <LinearLayout
                     android:layout_width="0dp"
-                    android:layout_height="match_parent"
+                    android:layout_height="40dp"
                     android:layout_margin="5dp"
                     android:layout_weight="4"
                     android:gravity="center|left"
@@ -35,8 +36,7 @@
                         android:layout_height="wrap_content"
                         android:paddingLeft="10dp"
                         android:text="全部"
-                        android:textColor="#ffffff"
-                        android:textSize="18sp" />
+                        android:textColor="#ffffff" />
 
                     <TextView
                         android:id="@+id/zw_huahui"
@@ -44,8 +44,7 @@
                         android:layout_height="wrap_content"
                         android:paddingLeft="10dp"
                         android:text="花卉"
-                        android:textColor="#d7ded7"
-                        android:textSize="18sp" />
+                        android:textColor="#d1d1d1" />
 
                     <TextView
                         android:id="@+id/zw_cao"
@@ -53,8 +52,7 @@
                         android:layout_height="wrap_content"
                         android:paddingLeft="10dp"
                         android:text="草"
-                        android:textColor="#d7ded7"
-                        android:textSize="18sp" />
+                        android:textColor="#d1d1d1" />
 
                     <TextView
                         android:id="@+id/zw_zhuzi"
@@ -62,8 +60,7 @@
                         android:layout_height="wrap_content"
                         android:paddingLeft="10dp"
                         android:text="竹子"
-                        android:textColor="#d7ded7"
-                        android:textSize="18sp" />
+                        android:textColor="#d1d1d1" />
 
                     <TextView
                         android:id="@+id/zw_shu"
@@ -71,22 +68,20 @@
                         android:layout_height="wrap_content"
                         android:paddingLeft="10dp"
                         android:text="树"
-                        android:textColor="#d7ded7"
-                        android:textSize="18sp" />
+                        android:textColor="#d1d1d1" />
 
-                    <ImageButton
-                        android:id="@+id/zw_sousuo"
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:background="#00ffffff"
-                        android:paddingRight="10dp"
-                        android:scaleType="fitEnd"
-                        android:tint="@android:color/white"
-                        app:srcCompat="@drawable/sousuo" />
+
                 </LinearLayout>
 
-
+                <ImageButton
+                    android:id="@+id/zw_sousuo"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:background="#00ffffff"
+                    android:layout_marginRight="10dp"
+                    android:scaleType="fitEnd"
+                    android:tint="@android:color/white"
+                    app:srcCompat="@drawable/sousuo" />
             </LinearLayout>
 
             <LinearLayout
