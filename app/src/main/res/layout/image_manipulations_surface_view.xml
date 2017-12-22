@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="horizontal">
 
+
     <org.opencv.android.JavaCameraView
         android:id="@+id/image_manipulations_activity_surface_view"
         android:layout_width="match_parent"
@@ -33,4 +34,10 @@
             android:text="轮廓线" />
     </LinearLayout>
 
+    <ImageView
+        android:id="@+id/scan_typeimg"
+        android:scaleType="fitCenter"
+        android:src="@drawable/scanhua"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
 </RelativeLayout>

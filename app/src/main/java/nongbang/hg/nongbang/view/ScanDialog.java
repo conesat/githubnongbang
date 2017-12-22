@@ -38,15 +38,18 @@ public class ScanDialog extends AlertDialog {
             @Override
             public void onClick(View v) {
                 dismiss();
-                context.startActivity(new Intent(context,ImageManipulationsActivity.class));
+                Intent intent=new Intent(context,ImageManipulationsActivity.class);
+                intent.putExtra("type","leaf");
+                context.startActivity(intent);
             }
         });
         flower.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 dismiss();
-                context.startActivity(new Intent(context,ImageManipulationsActivity.class));
-               // Toast.makeText(context,"123",Toast.LENGTH_SHORT).show();
+                Intent intent=new Intent(context,ImageManipulationsActivity.class);
+                intent.putExtra("type","hua");
+                context.startActivity(intent);
             }
         });
     }

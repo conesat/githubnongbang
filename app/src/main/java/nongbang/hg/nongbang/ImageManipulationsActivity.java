@@ -68,6 +68,9 @@ public class ImageManipulationsActivity extends Activity implements CvCameraView
 
     public static int           viewMode = VIEW_MODE_RGBA;
 
+    private String type;
+    private ImageView typeimg;//显示的轮廓
+
     private BaseLoaderCallback  mLoaderCallback = new BaseLoaderCallback(this) {
         @Override
         public void onManagerConnected(int status) {
@@ -97,6 +100,13 @@ public class ImageManipulationsActivity extends Activity implements CvCameraView
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
 
         setContentView(R.layout.image_manipulations_surface_view);
+        typeimg=(ImageView)findViewById(R.id.scan_typeimg);
+        type=this.getIntent().getExtras().getString("type");
+        if (type.compareTo("hua")==0){
+            typeimg.setImageResource(R.drawable.scanhua);
+        }else {
+            typeimg.setImageResource(R.drawable.scanye);
+        }
 
         mOpenCvCameraView = (CameraBridgeViewBase) findViewById(R.id.image_manipulations_activity_surface_view);
         mOpenCvCameraView.setVisibility(CameraBridgeViewBase.VISIBLE);
