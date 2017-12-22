@@ -56,6 +56,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private TextView zwquanbu,zwhuahui,zwzhuzi,zwshu,zwcao;
     private ImageButton zwsousuo;
 
+    private TextView wd_setting;
 
     private LinearLayout zynozw;
 
@@ -152,6 +153,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         });
 
         tab03=mlnflater.inflate(R.layout.wd_layout,null);
+        wd_setting=(TextView)tab03.findViewById(R.id.wd_setting);
+        wd_setting.setOnClickListener(this);
+
+
         zynozw=(LinearLayout)tab01.findViewById(R.id.zynozw);
         zwlistView=(ListView )tab02.findViewById(R.id.zwlistview);
 
@@ -307,6 +312,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 Uri content_url = Uri.parse("http://39.108.70.152/");
                 intent1.setData(content_url);
                 startActivity(intent1);
+                break;
+            case R.id.wd_setting:
+                startActivity(new Intent(MainActivity.this,SettingActivity.class));
                 break;
 
             case R.id.zw_quanbu:

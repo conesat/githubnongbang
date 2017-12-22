@@ -6,18 +6,6 @@
     android:background="#e5e5e5"
     android:layout_height="match_parent">
 
-    <com.john.waveview.WaveView
-        android:paddingTop="200dp"
-        android:id="@+id/wave_view"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="#ededed"
-        wave:above_wave_color="#029a45"
-        wave:blow_wave_color="#029a97"
-        wave:progress="10"
-        wave:wave_height="large"
-        app:wave_hz="slow"
-        wave:wave_length="middle" />
 
     <LinearLayout
         android:layout_width="match_parent"

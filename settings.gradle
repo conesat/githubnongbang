@@ -1,2 +1,2 @@
-include ':app', ':library', ':circleprogressbar'
+include ':app', ':circleprogressbar'
 include ':openCVLibrary331'
