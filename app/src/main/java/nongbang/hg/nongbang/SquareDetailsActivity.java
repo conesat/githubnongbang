@@ -62,6 +62,9 @@ public class SquareDetailsActivity extends AppCompatActivity implements View.OnC
             case R.id.detail_commentbnt:
                 Toast.makeText(SquareDetailsActivity.this,"请先登录",Toast.LENGTH_SHORT).show();
                 break;
+            case R.id.detail_img:
+
+                break;
         }
     }
 }

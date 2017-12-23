@@ -42,14 +42,10 @@ public class PhotoShopActivity extends AppCompatActivity implements View.OnClick
             @Override
             public Object instantiateItem(ViewGroup container, int position) {
                 ZoomImageView imageView=new ZoomImageView(getApplicationContext());
-//                Bitmap bm = BitmapFactory.decodeFile(String.valueOf(images.get(position)));
-//                // 将图片显示到ImageView中
-//                imageView.setImageBitmap(bm);
                 Picasso
                         .with(PhotoShopActivity.this)
                         .load("file://"+String.valueOf(images.get(position)))
                         .into(imageView);
-                //imageView.setImageResource(mImages[position]);
                 container.addView(imageView);
                 mImageViews[position]=imageView;
                 return imageView;

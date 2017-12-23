@@ -505,7 +505,7 @@
             android:layout_marginRight="10dp"
             android:layout_weight="1"
             android:background="@drawable/bai5"
-            android:ems="10"
+            android:textSize="16sp"
             android:focusable="true"
             android:hint="发表评论"
             android:textColor="#2d2d2d"
