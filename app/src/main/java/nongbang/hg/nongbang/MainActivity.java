@@ -53,6 +53,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private ImageButton mZwImg;
     private ImageButton mWdImg;
     private ImageView scanimg;
+    private ImageView squarenew;
 
     private TextView zwquanbu,zwhuahui,zwzhuzi,zwshu,zwcao;
     private ImageButton zwsousuo;
@@ -150,6 +151,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 startActivity(intent);
             }
         });
+        squarenew=(ImageView)tab00.findViewById(R.id.square_new);
+        squarenew.setOnClickListener(this);
 
         tab01=mlnflater.inflate(R.layout.zy_layout,null);
 
@@ -338,6 +341,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.wd_img:
                 viewPager.setCurrentItem(3);
+                break;
+            case R.id.square_new:
+                startActivity(new Intent(MainActivity.this,NewDetailsActivity.class));
                 break;
 
             case R.id.wd_fangwen:

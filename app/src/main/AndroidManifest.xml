@@ -99,8 +99,12 @@
         <activity
             android:name=".SettingActivity"
             android:theme="@style/TranslucentTheme" />
-        <activity android:name=".SquareDetailsActivity"
-            android:theme="@style/TranslucentTheme" ></activity>
+        <activity
+            android:name=".SquareDetailsActivity"
+            android:theme="@style/TranslucentTheme" />
+        <activity android:name=".NewDetailsActivity"
+            android:theme="@style/TranslucentTheme">
+        </activity>
     </application>
 
 </manifest>
