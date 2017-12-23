@@ -38,6 +38,7 @@
                     android:gravity="center"
                     android:padding="5dp"
                     android:text="推荐"
+                    android:textSize="16sp"
                     android:textColor="#ffffff" />
 
                 <TextView
@@ -46,6 +47,7 @@
                     android:gravity="center"
                     android:padding="5dp"
                     android:text="花卉类"
+                    android:textSize="16sp"
                     android:textColor="#d1d1d1" />
 
                 <TextView
@@ -54,6 +56,7 @@
                     android:gravity="center"
                     android:padding="5dp"
                     android:text="本草类"
+                    android:textSize="16sp"
                     android:textColor="#d1d1d1" />
 
                 <TextView
@@ -62,6 +65,7 @@
                     android:gravity="center"
                     android:padding="5dp"
                     android:text="作物类"
+                    android:textSize="16sp"
                     android:textColor="#d1d1d1" />
 
                 <TextView
@@ -70,6 +74,7 @@
                     android:gravity="center"
                     android:padding="5dp"
                     android:text="观赏植物"
+                    android:textSize="16sp"
                     android:textColor="#d1d1d1" />
 
                 <TextView
@@ -78,6 +83,7 @@
                     android:gravity="center"
                     android:padding="5dp"
                     android:text="大型植物"
+                    android:textSize="16sp"
                     android:textColor="#d1d1d1" />
             </LinearLayout>
         </HorizontalScrollView>
@@ -90,6 +96,7 @@
         android:orientation="horizontal">
 
         <ListView
+            android:scrollbars="none"
             android:id="@+id/square_listview"
             android:layout_width="match_parent"
             android:layout_height="match_parent"

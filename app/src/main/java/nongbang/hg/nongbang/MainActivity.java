@@ -142,6 +142,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         squarelistView.setOnScrollListener(this);
         squarelistAdapter=new SquarelistAdapter(squarelist,this);
         squarelistView.setAdapter(squarelistAdapter);
+        squarelistView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                startActivity(new Intent(MainActivity.this,SquareDetailsActivity.class));
+            }
+        });
 
         tab01=mlnflater.inflate(R.layout.zy_layout,null);
 
@@ -516,12 +522,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public void onScrollStateChanged(AbsListView view, int scrollState) {
         if (totalItemCount==lastVisibleItem && scrollState==SCROLL_STATE_IDLE && REF){
             if(!isLoading) {
+                isLoading = true;
                 if (view.getId()==R.id.zylistview) {
-                    isLoading = true;
                     tab01.findViewById(R.id.zy_loadlayout).setVisibility(View.VISIBLE);
                 }
                 if (view.getId()==R.id.zwlistview) {
-                    isLoading = true;
                     tab02.findViewById(R.id.zw_loadlayout).setVisibility(View.VISIBLE);
                 }
                 onLoad(view.getId());

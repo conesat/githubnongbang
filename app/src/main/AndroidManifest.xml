@@ -96,8 +96,11 @@
         <activity android:name=".APRQActivity" />
         <activity android:name=".MainActivity" />
         <activity android:name=".test" />
-        <activity android:name=".SettingActivity"
-            android:theme="@style/Theme.AppCompat.NoActionBar"></activity>
+        <activity
+            android:name=".SettingActivity"
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
+        <activity android:name=".SquareDetailsActivity"
+            android:theme="@style/Theme.AppCompat.NoActionBar" ></activity>
     </application>
 
 </manifest>

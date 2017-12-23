@@ -47,8 +47,17 @@
         android:layout_height="wrap_content"
         android:textColor="#029a45"
         android:text="#花卉#" />
-
+        <TextView
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="3dp"
+            android:layout_marginBottom="5dp"
+            android:id="@+id/user_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#353535"
+            android:text="有人遇到这种情况吗?大家帮我看看这是什么问题？" />
     <ImageView
+        android:background="#f4f4f4"
         android:id="@+id/user_img"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -66,34 +75,34 @@
             android:layout_height="match_parent"
             android:orientation="horizontal">
             <LinearLayout
+                android:gravity="center|left"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:orientation="horizontal">
 
                 <ImageView
                     android:layout_width="wrap_content"
-                    android:layout_height="40dp"
-                    android:layout_marginLeft="10dp"
-                    android:src="@android:drawable/btn_star_big_off" />
+                    android:layout_height="25dp"
+                    android:src="@drawable/staroff" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    android:layout_marginLeft="3dp"
                     android:layout_marginRight="5dp"
                     android:gravity="center"
                     android:text="100" />
             </LinearLayout>
             <LinearLayout
+                android:gravity="center|left"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="horizontal">
 
                 <ImageView
                     android:layout_width="wrap_content"
-                    android:layout_height="40dp"
+                    android:layout_height="25dp"
                     android:layout_marginLeft="10dp"
-                    android:src="@android:drawable/sym_action_chat" />
+                    android:src="@drawable/comment" />
 
                 <TextView
                     android:layout_width="wrap_content"

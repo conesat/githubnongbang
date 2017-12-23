@@ -36,6 +36,7 @@
                         android:layout_height="wrap_content"
                         android:paddingLeft="10dp"
                         android:text="全部"
+                        android:textSize="16sp"
                         android:textColor="#ffffff" />
 
                     <TextView
@@ -44,6 +45,7 @@
                         android:layout_height="wrap_content"
                         android:paddingLeft="10dp"
                         android:text="花卉"
+                        android:textSize="16sp"
                         android:textColor="#d1d1d1" />
 
                     <TextView
@@ -52,6 +54,7 @@
                         android:layout_height="wrap_content"
                         android:paddingLeft="10dp"
                         android:text="草"
+                        android:textSize="16sp"
                         android:textColor="#d1d1d1" />
 
                     <TextView
@@ -60,6 +63,7 @@
                         android:layout_height="wrap_content"
                         android:paddingLeft="10dp"
                         android:text="竹子"
+                        android:textSize="16sp"
                         android:textColor="#d1d1d1" />
 
                     <TextView
@@ -68,6 +72,7 @@
                         android:layout_height="wrap_content"
                         android:paddingLeft="10dp"
                         android:text="树"
+                        android:textSize="16sp"
                         android:textColor="#d1d1d1" />
 
 

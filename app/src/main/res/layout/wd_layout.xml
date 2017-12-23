@@ -45,13 +45,13 @@
 
         </LinearLayout>
 
-        <TextView
+        <ImageView
             android:id="@+id/wd_indemore"
             android:layout_width="0dp"
-            android:layout_height="match_parent"
+            android:layout_height="25dp"
             android:layout_weight="1"
             android:gravity="center"
-            android:text=">"
+            android:src="@drawable/jiantou"
             android:textSize="30sp" />
 
     </LinearLayout>
@@ -142,7 +142,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_margin="20dp"
+                android:layout_margin="10dp"
                 android:orientation="horizontal">
 
                 <TextView
@@ -152,19 +152,20 @@
                     android:text="动态收藏"
                     android:textSize="18sp" />
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                <ImageView
+                    android:scaleType="fitEnd"
+                    android:layout_width="0dp"
+                    android:layout_height="20dp"
                     android:layout_weight="1"
-                    android:gravity="right"
-                    android:text=">"
-                    android:textSize="20sp" />
+                    android:gravity="center"
+                    android:src="@drawable/jiantou"
+                    android:textSize="30sp" />
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_margin="20dp"
+                android:layout_margin="10dp"
                 android:orientation="horizontal">
 
                 <TextView
@@ -174,19 +175,20 @@
                     android:text="植物收藏"
                     android:textSize="18sp" />
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                <ImageView
+                    android:scaleType="fitEnd"
+                    android:layout_width="0dp"
+                    android:layout_height="20dp"
                     android:layout_weight="1"
-                    android:gravity="right"
-                    android:text=">"
-                    android:textSize="20sp" />
+                    android:gravity="center"
+                    android:src="@drawable/jiantou"
+                    android:textSize="30sp" />
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_margin="20dp"
+                android:layout_margin="10dp"
                 android:orientation="horizontal">
 
                 <TextView
@@ -196,19 +198,20 @@
                     android:text="我的钱包"
                     android:textSize="18sp" />
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                <ImageView
+                    android:scaleType="fitEnd"
+                    android:layout_width="0dp"
+                    android:layout_height="20dp"
                     android:layout_weight="1"
-                    android:gravity="right"
-                    android:text=">"
-                    android:textSize="20sp" />
+                    android:gravity="center"
+                    android:src="@drawable/jiantou"
+                    android:textSize="30sp" />
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_margin="20dp"
+                android:layout_margin="10dp"
                 android:orientation="horizontal">
 
                 <TextView
@@ -219,13 +222,14 @@
                     android:text="设置"
                     android:textSize="18sp" />
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                <ImageView
+                    android:scaleType="fitEnd"
+                    android:layout_width="0dp"
+                    android:layout_height="20dp"
                     android:layout_weight="1"
-                    android:gravity="right"
-                    android:text=">"
-                    android:textSize="20sp" />
+                    android:gravity="center"
+                    android:src="@drawable/jiantou"
+                    android:textSize="30sp" />
             </LinearLayout>
         </LinearLayout>
     </ScrollView>
