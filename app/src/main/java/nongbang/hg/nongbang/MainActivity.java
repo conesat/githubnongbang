@@ -136,7 +136,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         squarelistView=(ListView)tab00.findViewById(R.id.square_listview);
         for (int i=0;i<15;i++){
             Map<String ,Object> map=new HashMap<String, Object>();
-            map.put("user","");
+            map.put("postion","");
             squarelist.add(map);
         }
         squarelistView.setOnScrollListener(this);
@@ -145,7 +145,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         squarelistView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                startActivity(new Intent(MainActivity.this,SquareDetailsActivity.class));
+                Intent intent=new Intent(MainActivity.this,SquareDetailsActivity.class);
+                intent.putExtra("postion",position);
+                startActivity(intent);
             }
         });
 

@@ -12,6 +12,7 @@ import java.util.List;
 import java.util.Map;
 
 import nongbang.hg.nongbang.R;
+import nongbang.hg.nongbang.StaticClass.TestValues;
 
 /**
  * Created by Administrator on 2017-12-22.
@@ -47,18 +48,33 @@ public class SquarelistAdapter extends BaseAdapter {
         if (convertView==null){
             convertView= LayoutInflater.from(cotx).inflate(R.layout.squarelist_layout,null);
             holder = new SquarelistAdapter.ViewHolder();
-
+            holder.userico=(ImageView)convertView.findViewById(R.id.user_ico);
+            holder.start=(TextView)convertView.findViewById(R.id.square_start);
+            holder.comment=(TextView)convertView.findViewById(R.id.square_comment);
+            holder.share=(TextView)convertView.findViewById(R.id.square_share);
+            holder.title=(TextView)convertView.findViewById(R.id.square_title);
+            holder.type=(TextView)convertView.findViewById(R.id.square_type);
+            holder.username=(TextView)convertView.findViewById(R.id.user_name);
+            holder.img=(ImageView)convertView.findViewById(R.id.square_img);
             convertView.setTag(holder);
         }else{
             holder = (SquarelistAdapter.ViewHolder)convertView.getTag();
         }
+        holder.username.setText(TestValues.SQUAREUSERNAME.get(position));
+        holder.type.setText(TestValues.SQUARETYPE.get(position));
+        holder.start.setText(TestValues.SQUARESTART.get(position));
+        holder.share.setText(TestValues.SQUARESHARE.get(position));
         return convertView;
     }
 
     static class ViewHolder {
+        TextView type;
+        TextView start;
+        TextView comment;
+        TextView share;
         TextView title;
-        TextView time;
-        TextView repeat;
-        ImageView delete;
+        TextView username;
+        ImageView userico;
+        ImageView img;
     }
 }

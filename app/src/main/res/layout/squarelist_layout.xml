@@ -42,7 +42,7 @@
         android:layout_marginLeft="10dp"
         android:layout_marginTop="5dp"
         android:layout_marginBottom="5dp"
-        android:id="@+id/user_type"
+        android:id="@+id/square_type"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textColor="#029a45"
@@ -51,16 +51,18 @@
             android:layout_marginLeft="10dp"
             android:layout_marginTop="3dp"
             android:layout_marginBottom="5dp"
-            android:id="@+id/user_title"
+            android:id="@+id/square_title"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textColor="#353535"
             android:text="有人遇到这种情况吗?大家帮我看看这是什么问题？" />
     <ImageView
         android:background="#f4f4f4"
-        android:id="@+id/user_img"
+        android:id="@+id/square_img"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:scaleType="fitXY"
         app:srcCompat="@drawable/wetherbg" />
 
     <LinearLayout
@@ -86,6 +88,7 @@
                     android:src="@drawable/staroff" />
 
                 <TextView
+                    android:id="@+id/square_start"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_marginRight="5dp"
@@ -105,6 +108,7 @@
                     android:src="@drawable/comment" />
 
                 <TextView
+                    android:id="@+id/square_comment"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_marginLeft="3dp"
@@ -131,6 +135,7 @@
                 android:src="?attr/actionModeShareDrawable" />
 
             <TextView
+                android:id="@+id/square_share"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_marginLeft="3dp"

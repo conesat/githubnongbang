@@ -40,6 +40,7 @@ import java.io.File;
 
 import nongbang.hg.nongbang.MSQLite.ZwDb;
 import nongbang.hg.nongbang.MyAdapter.ZyListAdapter;
+import nongbang.hg.nongbang.StaticClass.TestValues;
 import nongbang.hg.nongbang.tools.HttpThread;
 import nongbang.hg.nongbang.util.Checknetwork;
 import nongbang.hg.nongbang.util.UnZip;
@@ -80,7 +81,6 @@ public class LoadingActivity extends AppCompatActivity {
         imageView = (ImageView) findViewById(R.id.loading_image);
         skip = (Button) findViewById(R.id.loading_but);
 
-
         // 版本判断。当手机系统大于 23 时，才有必要去判断权限是否获取
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
             //   for (int x=0;x<permissions.length;x++) {
@@ -92,6 +92,13 @@ public class LoadingActivity extends AppCompatActivity {
             if (i != PackageManager.PERMISSION_GRANTED || a != PackageManager.PERMISSION_GRANTED) {
                 // 如果没有授予该权限，就去提示用户请求
                 startRequestPermission();
+            }else {
+                if (Checknetwork.isNetworkAvailable(this)) {
+                    HttpThread httpThread = new HttpThread("getdatacunt");
+                    httpThread.getDataCunt();
+                } else {
+                    new Thread(new MyThread()).start();
+                }
             }
         }else {
             /*
@@ -119,12 +126,14 @@ public class LoadingActivity extends AppCompatActivity {
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
-
+            }
+            if (Checknetwork.isNetworkAvailable(this)) {
+                HttpThread httpThread = new HttpThread("getdatacunt");
+                httpThread.getDataCunt();
+            } else {
+                new Thread(new MyThread()).start();
             }
         }
-        // }
-
-
         skip.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -142,12 +151,7 @@ public class LoadingActivity extends AppCompatActivity {
         zwDb = new ZwDb(this);
         dbzw = zwDb.OpenZwdb();
         localcunt = allCaseNum();
-        if (Checknetwork.isNetworkAvailable(this)) {
-            HttpThread httpThread = new HttpThread("getdatacunt");
-            httpThread.getDataCunt();
-        } else {
-            new Thread(new MyThread()).start();
-        }
+        new TestValues();
     }
 
 
@@ -160,34 +164,6 @@ public class LoadingActivity extends AppCompatActivity {
         cursor.close();
         return count;
     }
-
-  /*  //第一次创建检测是否含有旧数据 将其重建
-    public void testData(){
-        sp = getSharedPreferences("config", MODE_PRIVATE);
-        String data = sp.getString("first", "");
-        if (data.compareTo("") == 0) {
-            File file=new File(Environment.getExternalStorageDirectory()+"/.nongbang");
-            if(file.exists()){
-                deleteDirWihtFile(file);
-            }
-            try {
-                file.mkdir();
-                file=new File(Environment.getExternalStorageDirectory()+"/.nongbang/images");
-                file.mkdir();
-                file=new File(Environment.getExternalStorageDirectory()+"/.nongbang/zwdata");
-                file.mkdir();
-                file=new File(Environment.getExternalStorageDirectory()+"/.nongbang/zwdata/images");
-                file.mkdir();
-                UnZip.unZip(this,"zwdata.zip",Environment.getExternalStorageDirectory()+"/.nongbang/zwdata/images",true);
-                SharedPreferences.Editor editor = sp.edit();
-                editor.putString("first", "no");
-                editor.commit();
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
-
-        }
-    }*/
 
     public static void deleteDirWihtFile(File dir) {
         if (dir == null || !dir.exists() || !dir.isDirectory())
@@ -370,6 +346,13 @@ public class LoadingActivity extends AppCompatActivity {
                         }
 
                     }
+
+                    if (Checknetwork.isNetworkAvailable(this)) {
+                        HttpThread httpThread = new HttpThread("getdatacunt");
+                        httpThread.getDataCunt();
+                    } else {
+                        new Thread(new MyThread()).start();
+                    }
                 } else {
                     if (grantResults[0] != PackageManager.PERMISSION_GRANTED) {
                         // 判断用户是否 点击了不再提醒。(检测该权限是否还可以申请)
@@ -437,8 +420,6 @@ public class LoadingActivity extends AppCompatActivity {
                     }
                 }
             }
-        }/*else if(requestCode==124){
-            zyadapter.notifyDataSetChanged();
-        }*/
+        }
     }
 }

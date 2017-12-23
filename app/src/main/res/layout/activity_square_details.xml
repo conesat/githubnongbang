@@ -17,7 +17,7 @@
 
 
         <ImageButton
-            android:id="@+id/square_back"
+            android:id="@+id/detail_back"
             android:layout_width="40dp"
             android:layout_height="match_parent"
             android:layout_margin="5dp"
@@ -27,7 +27,7 @@
             android:tint="#303030" />
 
         <ImageView
-            android:id="@+id/user_ico"
+            android:id="@+id/detail_ico"
             android:layout_width="30dp"
             android:layout_height="wrap_content"
             android:layout_marginBottom="5dp"
@@ -37,7 +37,7 @@
             android:src="@drawable/logo" />
 
         <TextView
-            android:id="@+id/user_name"
+            android:id="@+id/detail_name"
             android:layout_width="wrap_content"
             android:layout_height="40dp"
             android:layout_weight="1"
@@ -74,7 +74,7 @@
 
 
                     <TextView
-                        android:id="@+id/user_type"
+                        android:id="@+id/detail_type"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="5dp"
@@ -84,7 +84,7 @@
                         android:textColor="#029a45" />
 
                     <TextView
-                        android:id="@+id/user_title"
+                        android:id="@+id/detail_title"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="5dp"
@@ -94,11 +94,13 @@
                         android:textColor="#353535" />
 
                     <ImageView
-                        android:id="@+id/user_img"
+                        android:id="@+id/detail_img"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:background="#f4f4f4"
-                        app:srcCompat="@drawable/wetherbg" />
+                        android:adjustViewBounds="true"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/wetherbg" />
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -113,6 +115,7 @@
                             android:orientation="horizontal">
 
                             <LinearLayout
+
                                 android:layout_width="wrap_content"
                                 android:layout_height="match_parent"
                                 android:gravity="center|left"
@@ -124,6 +127,7 @@
                                     android:src="@drawable/staroff" />
 
                                 <TextView
+                                    android:id="@+id/detail_start"
                                     android:layout_width="wrap_content"
                                     android:layout_height="match_parent"
                                     android:layout_marginRight="5dp"
@@ -145,6 +149,7 @@
                                     android:src="@drawable/comment" />
 
                                 <TextView
+                                    android:id="@+id/detail_comment"
                                     android:layout_width="wrap_content"
                                     android:layout_height="match_parent"
                                     android:layout_marginLeft="3dp"
@@ -173,6 +178,7 @@
                                 android:src="?attr/actionModeShareDrawable" />
 
                             <TextView
+                                android:id="@+id/detail_share"
                                 android:layout_width="wrap_content"
                                 android:layout_height="match_parent"
                                 android:layout_marginLeft="3dp"
@@ -478,8 +484,7 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="40dp"
-        android:background="#ffffff"
+        android:layout_height="wrap_content"
         android:focusable="true"
         android:focusableInTouchMode="true"
         android:gravity="center"
@@ -489,14 +494,14 @@
         <ImageView
             android:id="@+id/imageView7"
             android:layout_width="30dp"
-            android:layout_height="wrap_content"
+            android:layout_height="40dp"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
             app:srcCompat="@drawable/camera" />
 
         <EditText
             android:layout_width="wrap_content"
-            android:layout_height="30dp"
+            android:layout_height="wrap_content"
             android:layout_marginRight="10dp"
             android:layout_weight="1"
             android:background="@drawable/bai5"
@@ -508,7 +513,7 @@
 
         <Button
             android:layout_marginRight="10dp"
-            android:id="@+id/imageButton"
+            android:id="@+id/detail_commentbnt"
             android:layout_width="wrap_content"
             android:layout_height="30dp"
             android:background="@drawable/bluebutton5"
