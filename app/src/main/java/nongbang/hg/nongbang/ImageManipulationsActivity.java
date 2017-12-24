@@ -1,12 +1,16 @@
 package nongbang.hg.nongbang;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.WindowManager;
+import android.view.animation.Animation;
+import android.view.animation.TranslateAnimation;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 
 import org.opencv.android.BaseLoaderCallback;
 import org.opencv.android.CameraBridgeViewBase;
@@ -30,6 +34,9 @@ public class ImageManipulationsActivity extends Activity implements CvCameraView
     private static final String  TAG                 = "OCVSample::Activity";
 
     private ImageView outlineimageview;
+
+    private ImageView j1,j2;//
+    private LinearLayout linearLayout;//
 
     public static final int      VIEW_MODE_RGBA      = 0;
     public static final int      VIEW_MODE_HIST      = 1;
@@ -124,6 +131,50 @@ public class ImageManipulationsActivity extends Activity implements CvCameraView
                 }
             }
         });
+
+        linearLayout=(LinearLayout)findViewById(R.id.res);
+        j1=(ImageView)findViewById(R.id.j1);
+        j1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(ImageManipulationsActivity.this,ZwJsActivity.class);
+                intent.putExtra("name","多肉");
+                intent.putExtra("ACT","ImageManipulationsActivity");
+                intent.putExtra("xueming","succulent plant");
+                startActivity(intent);
+            }
+        });
+        j2=(ImageView)findViewById(R.id.j2);
+        j2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(ImageManipulationsActivity.this,ZwJsActivity.class);
+                intent.putExtra("name","费菜");
+                intent.putExtra("ACT","ImageManipulationsActivity");
+                intent.putExtra("xueming","Sedum aizoon L");
+                startActivity(intent);
+            }
+        });
+
+        typeimg.setOnClickListener(new View.OnClickListener() {
+            int x=0;
+            @Override
+            public void onClick(View v) {
+                if (x==0){
+                    x=1;
+                    // 显示动画
+                    TranslateAnimation mShowAction = new TranslateAnimation(Animation.RELATIVE_TO_SELF, 1.0f,
+                            Animation.RELATIVE_TO_SELF, 0.0f, Animation.RELATIVE_TO_SELF,
+                            0.0f, Animation.RELATIVE_TO_SELF, 0.0f);
+                    mShowAction.setRepeatMode(Animation.REVERSE);
+                    mShowAction.setDuration(500);
+                    linearLayout.startAnimation(mShowAction);//开始动画
+                    linearLayout.setVisibility(View.VISIBLE);
+
+                }
+            }
+        });
+
     }
 
     @Override

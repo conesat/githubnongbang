@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:orientation="vertical"
-    android:background="@drawable/white20"
+    android:background="@drawable/hui5"
     android:paddingLeft="20dp"
     android:paddingRight="20dp"
     android:layout_height="wrap_content">

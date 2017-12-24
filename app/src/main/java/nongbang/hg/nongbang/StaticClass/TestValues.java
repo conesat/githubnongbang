@@ -14,9 +14,10 @@ public class TestValues {
     public static List<String> SQUARETITLE=new ArrayList<>();
     public static List<String> SQUARETYPE=new ArrayList<>();
     public static List<String> SQUAREIMG=new ArrayList<>();
-    public static List<String> SQUARESTART=new ArrayList<>();
+    public static List<Integer> SQUARESTART=new ArrayList<>();
     public static List<String> SQUARECOMMENT=new ArrayList<>();
     public static List<String> SQUARESHARE=new ArrayList<>();
+    public static List<Boolean> SQUAREISSTART=new ArrayList<>();
 
     public TestValues(){
         SQUAREUSERNAME.add("多多");
@@ -51,21 +52,37 @@ public class TestValues {
         SQUARETYPE.add("#花卉类#");
         SQUARETYPE.add("#花卉类#");
 
-        SQUARESTART.add("10");
-        SQUARESTART.add("22");
-        SQUARESTART.add("123");
-        SQUARESTART.add("45");
-        SQUARESTART.add("12");
-        SQUARESTART.add("135");
-        SQUARESTART.add("453");
-        SQUARESTART.add("54");
-        SQUARESTART.add("443");
-        SQUARESTART.add("345");
-        SQUARESTART.add("543");
-        SQUARESTART.add("345");
-        SQUARESTART.add("343");
-        SQUARESTART.add("423");
-        SQUARESTART.add("223");
+        SQUARESTART.add(10);
+        SQUARESTART.add(22);
+        SQUARESTART.add(12);
+        SQUARESTART.add(45);
+        SQUARESTART.add(12);
+        SQUARESTART.add(135);
+        SQUARESTART.add(453);
+        SQUARESTART.add(54);
+        SQUARESTART.add(443);
+        SQUARESTART.add(345);
+        SQUARESTART.add(543);
+        SQUARESTART.add(345);
+        SQUARESTART.add(343);
+        SQUARESTART.add(423);
+        SQUARESTART.add(223);
+
+        SQUAREISSTART.add(false);
+        SQUAREISSTART.add(false);
+        SQUAREISSTART.add(false);
+        SQUAREISSTART.add(false);
+        SQUAREISSTART.add(false);
+        SQUAREISSTART.add(false);
+        SQUAREISSTART.add(false);
+        SQUAREISSTART.add(false);
+        SQUAREISSTART.add(false);
+        SQUAREISSTART.add(false);
+        SQUAREISSTART.add(false);
+        SQUAREISSTART.add(false);
+        SQUAREISSTART.add(false);
+        SQUAREISSTART.add(false);
+        SQUAREISSTART.add(false);
 
         SQUARECOMMENT.add("345");
         SQUARECOMMENT.add("543");
@@ -98,5 +115,8 @@ public class TestValues {
         SQUARESHARE.add("343");
         SQUARESHARE.add("423");
         SQUARESHARE.add("223");
+
+
+
     }
 }

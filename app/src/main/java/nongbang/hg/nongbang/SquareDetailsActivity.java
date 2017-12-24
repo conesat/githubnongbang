@@ -22,6 +22,7 @@ public class SquareDetailsActivity extends AppCompatActivity implements View.OnC
     ImageView img;
     ImageView back;
     Button commentbnt;
+    ImageView startimg;
     int position;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,13 +45,36 @@ public class SquareDetailsActivity extends AppCompatActivity implements View.OnC
         img=(ImageView)findViewById(R.id.detail_img);
         back=(ImageView)findViewById(R.id.detail_back);
         commentbnt=(Button)findViewById(R.id.detail_commentbnt);
+        startimg=(ImageView)findViewById(R.id.detail_startimg);
         username.setText(TestValues.SQUAREUSERNAME.get(position));
         type.setText(TestValues.SQUARETYPE.get(position));
-        start.setText(TestValues.SQUARESTART.get(position));
+        start.setText(Integer.toString(TestValues.SQUARESTART.get(position)));
         share.setText(TestValues.SQUARESHARE.get(position));
 
         back.setOnClickListener(this);
         commentbnt.setOnClickListener(this);
+
+        if (TestValues.SQUAREISSTART.get(position)){;
+            startimg.setImageResource(R.drawable.staron);
+        }else {
+            startimg.setImageResource(R.drawable.staroff);
+        }
+        startimg.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (TestValues.SQUAREISSTART.get(position)){
+                    TestValues.SQUARESTART.set(position,TestValues.SQUARESTART.get(position)-1);
+                    start.setText(Integer.toString(TestValues.SQUARESTART.get(position)));
+                    TestValues.SQUAREISSTART.set(position,false);
+                    startimg.setImageResource(R.drawable.staroff);
+                }else {
+                    TestValues.SQUARESTART.set(position,TestValues.SQUARESTART.get(position)+1);
+                    start.setText(Integer.toString(TestValues.SQUARESTART.get(position)));
+                    TestValues.SQUAREISSTART.set(position,true);
+                    startimg.setImageResource(R.drawable.staron);
+                }
+            }
+        });
     }
 
     @Override
