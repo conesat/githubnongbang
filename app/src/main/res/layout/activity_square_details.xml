@@ -501,6 +501,7 @@
             app:srcCompat="@drawable/camera" />
 
         <EditText
+            android:id="@+id/commentet"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginRight="10dp"
@@ -517,7 +518,7 @@
             android:id="@+id/detail_commentbnt"
             android:layout_width="wrap_content"
             android:layout_height="30dp"
-            android:background="@drawable/bluebutton5"
+            android:background="@drawable/hui5"
             android:text="评论"
             android:textColor="#ffffff" />
     </LinearLayout>

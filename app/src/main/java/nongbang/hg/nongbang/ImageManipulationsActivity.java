@@ -1,8 +1,11 @@
 package nongbang.hg.nongbang;
 
 import android.app.Activity;
+import android.app.AlertDialog;
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
 import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
@@ -157,21 +160,37 @@ public class ImageManipulationsActivity extends Activity implements CvCameraView
         });
 
         typeimg.setOnClickListener(new View.OnClickListener() {
-            int x=0;
+
             @Override
             public void onClick(View v) {
-                if (x==0){
-                    x=1;
-                    // 显示动画
-                    TranslateAnimation mShowAction = new TranslateAnimation(Animation.RELATIVE_TO_SELF, 1.0f,
-                            Animation.RELATIVE_TO_SELF, 0.0f, Animation.RELATIVE_TO_SELF,
-                            0.0f, Animation.RELATIVE_TO_SELF, 0.0f);
-                    mShowAction.setRepeatMode(Animation.REVERSE);
-                    mShowAction.setDuration(500);
-                    linearLayout.startAnimation(mShowAction);//开始动画
-                    linearLayout.setVisibility(View.VISIBLE);
+                linearLayout.setVisibility(View.GONE);
+                final ProgressDialog pd3 = ProgressDialog.show(ImageManipulationsActivity.this, "提示", "正在寻找植物...", false, true);
+                new Handler().postDelayed(new Runnable(){
+                    @Override
+                    public void run() {
+                        pd3.dismiss();
+                        if (type.compareTo("hua")==0){
+                            AlertDialog.Builder dlg = new AlertDialog.Builder(ImageManipulationsActivity.this);
+                            dlg.setTitle("提示");
+                            dlg.setMessage("花型识别找不到植物，请尝试叶片识别。");
+                            dlg.setPositiveButton("确定",null);
+                            dlg.show();
+                        }else {
 
-                }
+                            // TODO Auto-generated method stub
+                            // 显示动画
+                            TranslateAnimation mShowAction = new TranslateAnimation(Animation.RELATIVE_TO_SELF, 1.0f,
+                                    Animation.RELATIVE_TO_SELF, 0.0f, Animation.RELATIVE_TO_SELF,
+                                    0.0f, Animation.RELATIVE_TO_SELF, 0.0f);
+                            mShowAction.setRepeatMode(Animation.REVERSE);
+                            mShowAction.setDuration(500);
+                            linearLayout.startAnimation(mShowAction);//开始动画
+                            linearLayout.setVisibility(View.VISIBLE);
+                        }
+                    }
+
+                }, 1500);
+
             }
         });
 

@@ -2,9 +2,12 @@ package nongbang.hg.nongbang;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.View;
 import android.view.Window;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -25,6 +28,7 @@ public class SquareDetailsActivity extends AppCompatActivity implements View.OnC
     ImageView back;
     Button commentbnt;
     ImageView startimg;
+    EditText commentet;
     int position;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -52,9 +56,33 @@ public class SquareDetailsActivity extends AppCompatActivity implements View.OnC
         type.setText(TestValues.SQUARETYPE.get(position));
         start.setText(Integer.toString(TestValues.SQUARESTART.get(position)));
         share.setText(TestValues.SQUARESHARE.get(position));
+        commentet=(EditText)findViewById(R.id.commentet);
+        commentet.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
 
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+                if (commentet.getText().toString().compareTo("")==0){
+                    commentbnt.setBackgroundResource(R.drawable.hui5);
+                    commentbnt.setEnabled(false);
+                }else {
+                    commentbnt.setEnabled(true);
+                    commentbnt.setBackgroundResource(R.drawable.bluebutton5);
+                }
+            }
+        });
         back.setOnClickListener(this);
         commentbnt.setOnClickListener(this);
+        commentbnt.setEnabled(false);
+
 
         if (TestValues.SQUAREISSTART.get(position)){;
             startimg.setImageResource(R.drawable.staron);
@@ -102,7 +130,10 @@ public class SquareDetailsActivity extends AppCompatActivity implements View.OnC
                 SquareDetailsActivity.this.finish();
                 break;
             case R.id.detail_commentbnt:
-                Toast.makeText(SquareDetailsActivity.this,"请先登录",Toast.LENGTH_SHORT).show();
+                Toast.makeText(SquareDetailsActivity.this,"已评论", Toast.LENGTH_SHORT).show();
+                commentet.setText("");
+                commentbnt.setBackgroundResource(R.drawable.hui5);
+                commentbnt.setEnabled(false);
                 break;
             case R.id.detail_img:
 

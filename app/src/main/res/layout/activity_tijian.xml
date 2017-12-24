@@ -44,6 +44,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="500dp" />
 
+
                 <TextView
                     android:layout_margin="5dp"
                     android:textSize="20sp"
@@ -51,7 +52,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="营养状态" />
+                    android:text="营养状态:稍微泛黄，颜色暗淡" />
 
                 <TextView
                     android:layout_margin="5dp"
@@ -60,8 +61,16 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="虫害状态" />
+                    android:text="虫害状态:未检测到虫害" />
 
+                <TextView
+                    android:layout_margin="5dp"
+                    android:textSize="20sp"
+                    android:id="@+id/tjzt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="意见:该多肉植物目前生长正常，但有些许问题，叶片颜色暗淡，可能是阳光照射不足，水分较少，您可以适当补充营养肥料和光照。" />
             </LinearLayout>
 
             <Button
