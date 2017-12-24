@@ -1,7 +1,6 @@
 package nongbang.hg.nongbang.MyAdapter;
 
 import android.content.Context;
-import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -9,11 +8,12 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.squareup.picasso.Picasso;
+
 import java.util.List;
 import java.util.Map;
 
 import nongbang.hg.nongbang.R;
-import nongbang.hg.nongbang.SquareDetailsActivity;
 import nongbang.hg.nongbang.StaticClass.TestValues;
 
 /**
@@ -60,14 +60,16 @@ public class SquarelistAdapter extends BaseAdapter {
             holder.username=(TextView)convertView.findViewById(R.id.user_name);
             holder.img=(ImageView)convertView.findViewById(R.id.square_img);
             holder.startimg=(ImageView)convertView.findViewById(R.id.square_startimg);
-            holder.img.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    Intent intent=new Intent(cotx,SquareDetailsActivity.class);
-                    intent.putExtra("postion",po);
-                    cotx.startActivity(intent);
-                }
-            });
+//            holder.img.setOnClickListener(new View.OnClickListener() {
+//                @Override
+//                public void onClick(View v) {
+//                    Intent intent=new Intent(cotx,SquareDetailsActivity.class);
+//                    intent.putExtra("postion",po);
+//                    cotx.startActivity(intent);
+//                }
+//            });
+
+
             holder.startimg.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
@@ -92,6 +94,21 @@ public class SquarelistAdapter extends BaseAdapter {
         holder.type.setText(TestValues.SQUARETYPE.get(position));
         holder.start.setText(Integer.toString(TestValues.SQUARESTART.get(position)));
         holder.share.setText(TestValues.SQUARESHARE.get(position));
+        Picasso
+                .with(cotx)
+                .load(TestValues.SQUAREUSERICO.get(position))
+                .into(holder.userico);
+        holder.title.setText(TestValues.SQUARETITLE.get(position));
+
+        if (TestValues.SQUAREIMG.get(position).compareTo("")!=0){
+            holder.img.setVisibility(View.VISIBLE);
+            Picasso
+                    .with(cotx)
+                    .load(TestValues.SQUAREIMG.get(position))
+                    .into(holder.img);
+        }else {
+            holder.img.setVisibility(View.GONE);
+        }
         return convertView;
     }
 

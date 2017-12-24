@@ -26,20 +26,23 @@ public class HttpThread extends Thread{
 
     //同步数据
     public void getDataCunt(){
-        HTTPURL="http://39.108.70.152/NongBangWeb/myservlet?type="+type;
+      //  HTTPURL="http://39.108.70.152/NongBangWeb/myservlet?type="+type;
+        HTTPURL="http://192.168.1.103:8888/NongBangWeb/myservlet?type="+type;
         this.start();
     }
 
     //同步数据
     public void SynData(String id){
-        HTTPURL="http://39.108.70.152/NongBangWeb/myservlet?type="+type+"&id="+id;
+        //HTTPURL="http://39.108.70.152/NongBangWeb/myservlet?type="+type+"&id="+id;
+        HTTPURL="http://192.168.1.103:8888/NongBangWeb/myservlet?type="+type+"&id="+id;
         this.start();
     }
 
 
     //获取意见
     public void GetYiJian(String xinxi){
-        HTTPURL="http://39.108.70.152/NongBangWeb/myservlet?type="+type+"&xinxi="+xinxi;
+       // HTTPURL="http://39.108.70.152/NongBangWeb/myservlet?type="+type+"&xinxi="+xinxi;
+        HTTPURL="http://192.168.1.103:8888/NongBangWeb/myservlet?type="+type+"&xinxi="+xinxi;
         this.start();
     }
 

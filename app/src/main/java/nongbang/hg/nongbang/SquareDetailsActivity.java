@@ -9,6 +9,8 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.squareup.picasso.Picasso;
+
 import nongbang.hg.nongbang.StaticClass.TestValues;
 
 public class SquareDetailsActivity extends AppCompatActivity implements View.OnClickListener{
@@ -75,6 +77,22 @@ public class SquareDetailsActivity extends AppCompatActivity implements View.OnC
                 }
             }
         });
+
+        Picasso
+                .with(SquareDetailsActivity.this)
+                .load(TestValues.SQUAREUSERICO.get(position))
+                .into(userico);
+        title.setText(TestValues.SQUARETITLE.get(position));
+
+        if (TestValues.SQUAREIMG.get(position).compareTo("")!=0){
+            img.setVisibility(View.VISIBLE);
+            Picasso
+                    .with(SquareDetailsActivity.this)
+                    .load(TestValues.SQUAREIMG.get(position))
+                    .into(img);
+        }else {
+            img.setVisibility(View.GONE);
+        }
     }
 
     @Override
