@@ -127,7 +127,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 win.setAttributes(params);
                 selectDialog.setCanceledOnTouchOutside(true);//设置点击Dialog外部任意区域关闭Dialog
                 selectDialog.show();
-
             }
         });
 
@@ -143,14 +142,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         squarelistView.setOnScrollListener(this);
         squarelistAdapter=new SquarelistAdapter(squarelist,this);
         squarelistView.setAdapter(squarelistAdapter);
-        squarelistView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Intent intent=new Intent(MainActivity.this,SquareDetailsActivity.class);
-                intent.putExtra("postion",position);
-                startActivity(intent);
-            }
-        });
+//        squarelistView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+//            @Override
+//            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+//                Intent intent=new Intent(MainActivity.this,SquareDetailsActivity.class);
+//                intent.putExtra("postion",position);
+//                startActivity(intent);
+//            }
+//        });
         squarenew=(ImageView)tab00.findViewById(R.id.square_new);
         squarenew.setOnClickListener(this);
 

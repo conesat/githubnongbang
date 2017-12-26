@@ -1,6 +1,7 @@
 package nongbang.hg.nongbang.MyAdapter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -14,6 +15,7 @@ import java.util.List;
 import java.util.Map;
 
 import nongbang.hg.nongbang.R;
+import nongbang.hg.nongbang.SquareDetailsActivity;
 import nongbang.hg.nongbang.StaticClass.TestValues;
 
 /**
@@ -60,36 +62,44 @@ public class SquarelistAdapter extends BaseAdapter {
             holder.username=(TextView)convertView.findViewById(R.id.user_name);
             holder.img=(ImageView)convertView.findViewById(R.id.square_img);
             holder.startimg=(ImageView)convertView.findViewById(R.id.square_startimg);
-//            holder.img.setOnClickListener(new View.OnClickListener() {
-//                @Override
-//                public void onClick(View v) {
-//                    Intent intent=new Intent(cotx,SquareDetailsActivity.class);
-//                    intent.putExtra("postion",po);
-//                    cotx.startActivity(intent);
-//                }
-//            });
-
-
-            holder.startimg.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    if (TestValues.SQUAREISSTART.get(po)){
-                        TestValues.SQUARESTART.set(po,TestValues.SQUARESTART.get(po)-1);
-                        holder.start.setText(Integer.toString(TestValues.SQUARESTART.get(po)));
-                        TestValues.SQUAREISSTART.set(po,false);
-                        holder.startimg.setImageResource(R.drawable.staroff);
-                    }else {
-                        TestValues.SQUARESTART.set(po,TestValues.SQUARESTART.get(po)+1);
-                        holder.start.setText(Integer.toString(TestValues.SQUARESTART.get(po)));
-                        TestValues.SQUAREISSTART.set(po,true);
-                        holder.startimg.setImageResource(R.drawable.staron);
-                    }
-                }
-            });
             convertView.setTag(holder);
         }else{
             holder = (SquarelistAdapter.ViewHolder)convertView.getTag();
         }
+        holder.img.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(cotx,SquareDetailsActivity.class);
+                intent.putExtra("postion",po);
+                cotx.startActivity(intent);
+            }
+        });
+
+        holder.title.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(cotx,SquareDetailsActivity.class);
+                intent.putExtra("postion",po);
+                cotx.startActivity(intent);
+            }
+        });
+
+        holder.startimg.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (TestValues.SQUAREISSTART.get(po)){
+                    TestValues.SQUARESTART.set(po,TestValues.SQUARESTART.get(po)-1);
+                    holder.start.setText(Integer.toString(TestValues.SQUARESTART.get(po)));
+                    TestValues.SQUAREISSTART.set(po,false);
+                    holder.startimg.setImageResource(R.drawable.staroff);
+                }else {
+                    TestValues.SQUARESTART.set(po,TestValues.SQUARESTART.get(po)+1);
+                    holder.start.setText(Integer.toString(TestValues.SQUARESTART.get(po)));
+                    TestValues.SQUAREISSTART.set(po,true);
+                    holder.startimg.setImageResource(R.drawable.staron);
+                }
+            }
+        });
         holder.username.setText(TestValues.SQUAREUSERNAME.get(position));
         holder.type.setText(TestValues.SQUARETYPE.get(position));
         holder.start.setText(Integer.toString(TestValues.SQUARESTART.get(position)));
