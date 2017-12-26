@@ -11,6 +11,8 @@ import java.util.Map;
  */
 
 public  class StaticVariable {
+    public static String MyUrl="http://39.108.70.152";
+   // public static String MyUrl="http://192.168.1.101:8888";//测试地址
     public static Uri IMAGEURI;
     public static String APRTIME;
     public static String APRQREPEAT;

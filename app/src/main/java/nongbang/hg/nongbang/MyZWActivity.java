@@ -409,6 +409,11 @@ public class MyZWActivity extends AppCompatActivity implements SwipeRefreshLayou
                    // swipeRefresh.setRefreshing(false);
                     //Toast.makeText(MyZWActivity.this,"无新数据",Toast.LENGTH_SHORT).show();
                     break;
+                case 407:
+                    swipeRefresh.setRefreshing(false);
+                    Toast.makeText(MyZWActivity.this,"服务器维护中！",Toast.LENGTH_SHORT).show();
+
+                    break;
             }
         };
     };
@@ -643,6 +648,10 @@ public class MyZWActivity extends AppCompatActivity implements SwipeRefreshLayou
                     if (list.get(0).compareTo("访问被限制！")==0){
                         Message msg = handler.obtainMessage();
                         msg.what = 405;
+                        handler.sendMessage(msg);
+                    }else if (list.get(0).compareTo("系统维护中！")==0){
+                        Message msg = handler.obtainMessage();
+                        msg.what = 407;
                         handler.sendMessage(msg);
                     }else {
                         Message msg = handler.obtainMessage();

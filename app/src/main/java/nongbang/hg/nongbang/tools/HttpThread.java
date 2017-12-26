@@ -6,6 +6,7 @@ import java.io.IOException;
 
 import nongbang.hg.nongbang.LoadingActivity;
 import nongbang.hg.nongbang.MyZWActivity;
+import nongbang.hg.nongbang.StaticClass.StaticVariable;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.Response;
@@ -17,6 +18,7 @@ import okhttp3.Response;
 public class HttpThread extends Thread{
     public static  String HTTPURL;
     String type;
+
     /**
     * xinxi 组成（学名/今日低温/今日高温/今日天气/明日低温/明日高温/明日天气）
      **/
@@ -24,25 +26,26 @@ public class HttpThread extends Thread{
         this.type=type;
     }
 
+
     //同步数据
     public void getDataCunt(){
-       HTTPURL="http://39.108.70.152/NongBangWeb/myservlet?type="+type;
-       // HTTPURL="http://192.168.1.103:8888/NongBangWeb/myservlet?type="+type;
+//       HTTPURL="http://39.108.70.152/NongBangWeb/myservlet?type="+type;
+        HTTPURL= StaticVariable.MyUrl+"/NongBangWeb/myservlet?type="+type;
         this.start();
     }
 
     //同步数据
     public void SynData(String id){
-        HTTPURL="http://39.108.70.152/NongBangWeb/myservlet?type="+type+"&id="+id;
-        //HTTPURL="http://192.168.1.103:8888/NongBangWeb/myservlet?type="+type+"&id="+id;
+        //HTTPURL="http://39.108.70.152/NongBangWeb/myservlet?type="+type+"&id="+id;
+        HTTPURL=StaticVariable.MyUrl+"/NongBangWeb/myservlet?type="+type+"&id="+id;
         this.start();
     }
 
 
     //获取意见
     public void GetYiJian(String xinxi){
-       HTTPURL="http://39.108.70.152/NongBangWeb/myservlet?type="+type+"&xinxi="+xinxi;
-      //  HTTPURL="http://192.168.1.103:8888/NongBangWeb/myservlet?type="+type+"&xinxi="+xinxi;
+       //HTTPURL="http://39.108.70.152/NongBangWeb/myservlet?type="+type+"&xinxi="+xinxi;
+       HTTPURL=StaticVariable.MyUrl+"/NongBangWeb/myservlet?type="+type+"&xinxi="+xinxi;
         this.start();
     }
 
